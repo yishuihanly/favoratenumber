@@ -11,7 +11,6 @@ shinyServer(
 #     badcourse<-c("1","2","3")
     output$testvalue<-renderPrint({input$course})
     output$inputValue<-renderPrint({input$id1})
-   
     output$prediction<-renderPrint({
 #       if (input$course=="1"|input$course=="2"|input$course=="3" )
 #       {"Your WILL NEVER HAVE LOVER!"}

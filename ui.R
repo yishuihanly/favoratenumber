@@ -6,7 +6,7 @@ shinyUI(pageWithSidebar(
     # numericInput
     numericInput("id1","Your favorite NUMBER (from 0 to 9)",
                  5,min=0,max=9),
-#     submitButton('Submit'),
+    submitButton('Submit'),
     # radio button
     radioButtons('gender','Gender', 
                  c("Mal"="1",
