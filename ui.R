@@ -24,8 +24,7 @@ shinyUI(pageWithSidebar(
                          )),
     submitButton('Go, My beauty')
   ),
-  mainPanel(
-    
+  mainPanel( 
     h1('Instruction'),
     h4('Please input'),
     h4('1) your name,'),
@@ -36,7 +35,8 @@ shinyUI(pageWithSidebar(
     h4('At last, click "Go, My beauty".'),
     h4('Then this app could tell you the favorite 
         number of your lover.'),
-    h3('If some unexpected result comes out, can you find the reason?'),
+    h3('If some unexpected result comes out, can you find the reason?
+       Please try to change something:)'),
 #     verbatimTextOutput('testvalue'),
     h3('Your favorite number:'),
     verbatimTextOutput('inputValue'),
