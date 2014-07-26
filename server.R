@@ -8,16 +8,18 @@ halflover<-function(z=1,gender=1) {
 shinyServer(
   function(input, output) {
     x<-reactive({nchar(input$name)})
-#     badcourse<-c("1","2","3")
+    #     badcourse<-c("1","2","3")
+    goodcourse<-c("4","5","6","7","8")
     output$testvalue<-renderPrint({input$course})
     output$inputValue<-renderPrint({input$id1})
+    juge<-reactive(is.element(input$course,badcourse))
     output$prediction<-renderPrint({
-#       if (input$course=="1"|input$course=="2"|input$course=="3" )
-#       {"Your WILL NEVER HAVE LOVER!"}
-      if (is.element(input$course,badcourse)){
-        "YOU WILL NEVER HAVE LOVE!"
-      }
-      else{ x()+halflover(input$id1,input$gender)}
-     })
+      #       if (is.element(input$course,badcourse)){
+      if (all(input$course %in% goodcourse)){  
+# { }
+        x()+halflover(input$id1,input$gender)
+      } else{ 
+        "YOU WILL NEVER HAVE A LOVER!"}
+    }) 
   }
 )
