@@ -6,20 +6,22 @@ shinyUI(pageWithSidebar(
     # numericInput
     numericInput("id1","Your favorite NUMBER (from 0 to 9)",
                  5,min=0,max=9),
-    submitButton('Submit'),
+#     submitButton('Submit'),
     # radio button
     radioButtons('gender','Gender', 
                  c("Mal"="1",
                    "Femal"="2")          
     ),
     # checkbox
-    checkboxGroupInput("course","course",
+    checkboxGroupInput("course","Choose the courses you love",
                        c("Physics"="1",
                          "Math"="2",
                          "Chem"="3",
-                         "history"="4",
-                         "literature"="5",
-                         "other"="6"
+                         "History"="4",
+                         "Literature"="5",
+                         "art"="6",
+                         "law"="7",
+                        "others"="8"
                          ))
   ),
   mainPanel(
@@ -28,7 +30,7 @@ shinyUI(pageWithSidebar(
     h4('Please input your name, your favorite number and choose 
         your gender,then this app could tell you the favorite 
         number of your lover.'),
-    
+#     verbatimTextOutput('testvalue'),
     h3('Your favorite number:'),
     verbatimTextOutput('inputValue'),
     h3('The favorite number of your lover:'),
