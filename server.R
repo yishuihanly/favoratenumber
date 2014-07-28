@@ -19,7 +19,7 @@ shinyServer(
 # { }
         x()+halflover(input$id1,input$gender)
       } else{ 
-        "YOU WILL NEVER HAVE A LOVER!"}
+        "YOU WILL NEVER HAVE LOVERs!"}
     }) 
   }
 )
